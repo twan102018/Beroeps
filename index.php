@@ -1,5 +1,5 @@
 <?php 
-include 'resources/pages/forms_script.php'
+include 'resources/pages/forms_script.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,32 +44,7 @@ include 'resources/pages/forms_script.php'
         <img src="resources/images/banner/Banner.png" alt="">
     </div>
     <div class="wrapper">
-      <div class="card card1">
-          <div class="poster">
-            <img src="resources/images/items/Png.png" alt="poster">
-          </div>
-          <div class="details">
-            <h3>Valkyrie helmet</h3>
-            <div class="tags">
-              <span class="bg-info">Rare💎</span>
-              <span class="bg-danger">Limited🕗</span>
-              <span class="bg-price">$400</span>
-              <br><br>
-              <button class="add_shopping"><span class="material-symbols-outlined add_remove">
-                add_shopping_cart
-                </span></button>
-              <button class="remove_shopping"><span class="material-symbols-outlined add_remove">
-                remove_shopping_cart
-                </span></button>
-            </div>
-            <div class="info">
-              <p>
-                This splendid helm is a replica of ones worn by the valkyries, a group of minor deities who serve Odin in Norse mythology.</p>
-              <p>Led by Freya, they uphold justice and righteousness.</p>
-            </div>
-        </div>
-      </div>
-      
+        <?php include 'resources/pages/cards.php'; // Include the code to display cards here ?>
     </div>
 </body>
 </html>
