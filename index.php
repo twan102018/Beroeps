@@ -1,5 +1,5 @@
 <?php 
-include 'config.php';
+include 'forms_script.php'
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +20,16 @@ include 'config.php';
       <li style="float:right">
         <img src="resources/images/pfp/default.png" alt="" id="dropdown-trigger">
         <div class="dropdown-content">
-          <!-- Add your dropdown content here -->
-          <a href="resources/pages/forms.php">Log In/Register</a>
+          <?php if (!$loggedInUsername): ?>
+                        <a href="resources/pages/forms.php" class="active">Log In/Register</a>
+          <?php endif; ?>
         </div>
       </li>
+      <?php if ($loggedInUsername): ?>
+                <li style="float:right"><a href="#">
+                        <?php echo $loggedInUsername; ?>
+                    </a></li>
+      <?php endif; ?>
       <li style="float:right"><a href="#contact"><span class="material-symbols-outlined">
         shopping_cart
         </span></a></li>
