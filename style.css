@@ -92,10 +92,6 @@ body{
     bottom: 0px;
 }
 
-.card .details .logo {
-    max-width: 180px;
-}
-
 .card .details h3 {
     font-size: 1rem;
     color: #fff;
@@ -235,4 +231,22 @@ nav> ul {
   .dropdown-content a:hover {
     background-color: #555; /* Change this to your desired hover background color */
   }
-  
+  .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 200,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.add_remove{
+  background-color: gray;
+  transition: 1s;
+}
+.add_remove:hover{
+  background-color: rgba(128, 128, 128, 0.653);
+}
+.add_shopping,
+.remove_shopping{
+  background-color: transparent;
+  border: transparent;
+}
