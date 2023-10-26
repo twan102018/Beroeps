@@ -14,15 +14,21 @@ include 'resources/pages/forms_script.php'
   <nav>
     <ul>
       <li><a class="active" href="#Home">Home</a></li>
-      <li><a href="#news">Upload</a></li>
+      <li><a href="resources/pages/upload.php">Upload</a></li>
+      <li><a href="#news">Orders</a></li>
       <li><a href="#contact">Contact</a></li>
       <li style="float:right">
         <img src="resources/images/pfp/default.png" alt="" id="dropdown-trigger">
         <div class="dropdown-content">
-          <?php if (!$loggedInUsername): ?>
-                        <a href="resources/pages/forms.php" class="active">Log In/Register</a>
-          <?php endif; ?>
-        </div>
+    <?php if (!$loggedInUsername): ?>
+        <a href="resources/pages/forms.php" class="active">Log In/Register</a>
+    <?php endif; ?>
+    <?php if ($loggedInUsername): ?>
+        <a href="resources/pages/logout.php">
+            <?php echo "Log Out"; ?>
+        </a>
+    <?php endif; ?>
+</div>
       </li>
       <?php if ($loggedInUsername): ?>
                 <li style="float:right"><a href="#">

@@ -5,11 +5,28 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-#log_reg{
-    padding: 5px;
-    background-color: white;
-    border-radius: 25px;
-    text-decoration: none;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+}
+input{
+    width: 200px;
+    height: 40px;
+    background-color: rgba(163, 189, 207, 0.394);
+    border: none;
+    display: block;
+}
+textarea{
+        width: 200px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.781);
+        border: none;
+        display: block;
+}
+input[type=submit]{
+    background-color: rgba(192, 229, 250, 0.394);
 }
 
 nav> ul {
@@ -111,28 +128,3 @@ nav> ul {
   .dropdown-content a:hover {
     background-color: #555; /* Change this to your desired hover background color */
   }
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90%;
-}
-input{
-    width: 200px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.394);
-    border: none;
-    display: block;
-}
-input[type=submit]{
-    background-color: rgba(192, 229, 250, 0.394);
-}
-button{
-    border: none;
-    background-color: rgba(192, 250, 194, 0.394);
-    margin-top: 21rem;
-    margin-left: -12.7rem;
-    width: 200px;
-    height: 40px;
-}
