@@ -17,8 +17,8 @@ include 'forms_script.php'
             <li><a href="../../index.php">Home</a></li>
             <li><a href="upload.php">Upload</a></li>
             <li><a href="#news">Orders</a></li>
-            <li><a href="contact.php" class="active">Contact</a></li>
-      <li><a href="info.php">Info</a></li>
+            <li><a href="contact.php">Contact</a></li>
+      <li><a href="info.php" class="active">Info</a></li>
 
             <li style="float:right">
                 <img src="../images/pfp/default.png" alt="" id="dropdown-trigger">
@@ -43,16 +43,11 @@ include 'forms_script.php'
                     </span></a></li>
         </ul>
     </nav>
-    <h2>Contact</h2>
-    <div class="container">
-<form method="post" action="https://formsubmit.co/088901@glr.nl">      
-  <input name="name" type="text" class="feedback-input" placeholder="Name"/>   
-  <input name="email" type="text" class="feedback-input" placeholder="Email" minlength="5" pattern="[^ @]*@[^ @]*" require/>
-  <input name="subject" type="text" class="feedback-input" placeholder="Subject" require/>
-  <input type="hidden" name="_next" value="https://hermionehp.nl">
-  <textarea name="text" class="feedback-input" placeholder="Comment" require></textarea>
-  <input type="submit" value="SUBMIT"/>
-</form>
+    <h2>What's this website about</h2>
+    <div class="container2">
+<p>This website was created with the purpose of offering a dedicated platform for members of a collectors' organization to showcase their cherished collectibles. Our primary goal is to create a vibrant online community where enthusiasts can come together to share, discuss, and celebrate their passion for surrounding the collections of games. this website is the perfect place to connect with fellow collectors and display your treasures to a like-minded audience.</p>
+<p>Our mission is to foster a sense of belonging among collectors and provide a user-friendly space where they can exhibit their collections, exchange stories, and learn from one another's expertise. We encourage collectors of all types to join our growing community, whether you're a seasoned veteran or just starting your collecting journey. Together, we can enrich the world of collecting and bring these remarkable items to a wider audience.</p>
+<p>So, whether you're looking to showcase your latest finds, seek advice on preservation and restoration, or simply share your enthusiasm for the world of collecting, this website is here to support your interests and connect you with fellow collectors who share your passion.</p>
 </div>
 </body>
 </html>

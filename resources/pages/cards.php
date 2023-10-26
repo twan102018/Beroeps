@@ -34,8 +34,8 @@ if ($result->num_rows > 0) {
         
         echo '<span class="bg-price">$' . $price . '</span>';
         echo '<br><br>';
-        echo '<button class="add_shopping"><span class="material-symbols-outlined add_remove">add_shopping_cart</span></button>';
-        echo '<button class="remove_shopping"><span class="material-symbols-outlined add_remove">remove_shopping_cart</span></button>';
+        echo '<button class="add_shopping add-to-cart" data-item-id="1"><span class="material-symbols-outlined add_remove">add_shopping_cart</span></button>';
+        echo '<button class="remove_shopping remove-from-cart" data-item-id="1"><span class="material-symbols-outlined add_remove">remove_shopping_cart</span></button>';
         echo '</div>';
         echo '<div class="info">';
         echo '<p>' . $description . '</p>';

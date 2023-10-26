@@ -30,6 +30,8 @@ include 'forms_script.php'
             <li><a href="upload.php">Upload</a></li>
             <li><a href="#news">Orders</a></li>
             <li><a href="contact.php">Contact</a></li>
+      <li><a href="info.php">Info</a></li>
+
             <li style="float:right">
                 <img src="../images/pfp/default.png" alt="" id="dropdown-trigger">
                 <div class="dropdown-content">
