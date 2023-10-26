@@ -1,7 +1,6 @@
 <?php 
-include 'forms_script.php'
+include 'resources/pages/forms_script.php'
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
