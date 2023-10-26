@@ -41,30 +41,31 @@ include 'forms_script.php'
         </ul>
     </nav>
     <div class="container">
-        <form action="process_form.php" method="post" enctype="multipart/form-data">
-            <label for="item_name">Item Name</label>
-            <input type="text" name="item_name" required>
-            <br>
-            <div id="tags">
-                <label for="tags">Tags:</label>
-                <label for="rare">Rare💎</label>
-                <input type="checkbox" name="tags[]" value="1">
-                <label for="limited">Limited🕗</label>
-                <input type="checkbox" name="tags[]" value="2">
-            </div>
-            <br>
-            <label for="description">Description</label>
-            <input type="text" name="description" required><br>
-            <label for="description2">Description 2</label>
-            <input type="text" name="description2" required><br>
-            <label for="price">Price</label>
-            <input type="number" name="price" required>
-            <br>
-            <label for="file">PNG Image:</label>
-            <input type="file" name="file" required>
-            <br>
-            <input type="submit" value="Upload">
-        </form>
-    </div>
+    <form action="process_form.php" method="post">
+        <label for="item_name">Item Name</label>
+        <input type="text" name="item_name" required>
+        <br>
+        <div id="tags">
+            <label for="tags">Tags:</label>
+            <label for="rare">Rare💎</label>
+            <input type="checkbox" name="tags[]" value="Rare">
+            <label for="limited">Limited🕗</label>
+            <input type="checkbox" name="tags[]" value="Limited">
+        </div>
+        <br>
+        <label for="description">Description</label>
+        <input type="text" name="description" required><br>
+        <label for="description2">Description 2</label>
+        <input type="text" name "description2" required><br>
+        <label for="price">Price</label>
+        <input type="number" name="price" required>
+        <br>
+        <!-- Add a field for PNG link -->
+        <label for="png_link">PNG Image Link:</label>
+        <input type="text" name="png_link" required>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</div>
 </body>
 </html>
