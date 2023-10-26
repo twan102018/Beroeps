@@ -16,7 +16,7 @@ include 'resources/pages/forms_script.php'
       <li><a class="active" href="#Home">Home</a></li>
       <li><a href="resources/pages/upload.php">Upload</a></li>
       <li><a href="#news">Orders</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="resources/pages/contact.php">Contact</a></li>
       <li style="float:right">
         <img src="resources/images/pfp/default.png" alt="" id="dropdown-trigger">
         <div class="dropdown-content">

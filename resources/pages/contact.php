@@ -1,3 +1,6 @@
+<?php
+include 'forms_script.php'
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../styling/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <nav>
@@ -13,12 +17,12 @@
             <li><a href="../../index.php">Home</a></li>
             <li><a href="upload.php">Upload</a></li>
             <li><a href="#news">Orders</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="contact.php" class="active">Contact</a></li>
             <li style="float:right">
                 <img src="../images/pfp/default.png" alt="" id="dropdown-trigger">
                 <div class="dropdown-content">
     <?php if (!$loggedInUsername): ?>
-        <a href="resources/pages/forms.php" class="active">Log In/Register</a>
+        <a href="resources/pages/forms.php">Log In/Register</a>
     <?php endif; ?>
     <?php if ($loggedInUsername): ?>
         <a href="logout.php">
