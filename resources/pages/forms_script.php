@@ -1,6 +1,6 @@
 <?php
-session_start();
 ini_set('session.gc_maxlifetime', 30 * 24 * 3600);
+session_start();
 require 'config.php';
 
 // Check if the user is already logged in

@@ -1,12 +1,14 @@
 <?php
-include 'config.php'; // Include your database connection script
+// Include your database connection script
+include 'config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $item_name = $_POST['item_name'];
-    $description = $_POST['description'];
-    $description2 = $_POST['description2'];
-    $price = $_POST['price'];
+// Check if the request method is POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Retrieve and sanitize form data
+    $item_name = filter_input(INPUT_POST, 'item_name', FILTER_SANITIZE_STRING);
+    $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+    $description2 = filter_input(INPUT_POST, 'description2', FILTER_SANITIZE_STRING);
+    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 
     // Initialize tags as 0
     $tags = 0;
@@ -21,34 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Handle file upload (you should add more error handling here)
-   // ...
+    // Get the PNG link from the form and sanitize it
+    $png_link = filter_input(INPUT_POST, 'png_link', FILTER_SANITIZE_URL);
 
-   if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
-    // Check the file type
-    $file_type = $_FILES["file"]["type"];
+    // Check if the data is valid
+    if ($item_name && $description && $description2 && $price !== false && $png_link) {
+        // Prepare the SQL statement
+        $sql = "INSERT INTO verzamelaar (item_name, beschrijving, beschrijving2, prijs, tags, png_link) VALUES (?, ?, ?, ?, ?, ?)";
 
-    if ($file_type === "image/png") {
-        $file_name = $_FILES["file"]["name"];
-        $file_tmp_name = $_FILES["file"]["tmp_name"];
+        // Prepare the SQL statement
+        $stmt = $connection->prepare($sql);
 
-        // Generate a unique filename by adding a timestamp
-        $timestamp = time();
-        $file_name = $timestamp . '_' . $file_name;
-
-        // Move the uploaded file to your desired directory
-        $upload_directory = "../images/items/"; // Change this to your actual directory
-        $destination = $upload_directory . $file_name;
-
-        if (move_uploaded_file($file_tmp_name, $destination)) {
-            // Now, insert the data into your database
-            $sql = "INSERT INTO verzamelaar (item_name, beschrijving, beschrijving2, prijs, tags, file_name) VALUES (?, ?, ?, ?, ?, ?)";
-
-            // Prepare the SQL statement
-            $stmt = $connection->prepare($sql);
-
+        if ($stmt) {
             // Bind parameters and execute the query
-            $stmt->bind_param("sssiss", $item_name, $description, $description2, $price, $tags, $file_name);
+            $stmt->bind_param("sssiss", $item_name, $description, $description2, $price, $tags, $png_link);
 
             if ($stmt->execute()) {
                 // Data inserted successfully
@@ -61,15 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Close the prepared statement
             $stmt->close();
         } else {
-            // Handle file upload errors
-            echo "Error moving the uploaded file.";
+            // Handle database connection or query preparation errors
+            echo "Error preparing the SQL statement.";
         }
     } else {
-        echo "Only PNG files are allowed for upload.";
+        // Handle invalid or missing data
+        echo "Invalid or missing data in the form.";
     }
-} else {
-    // Handle file upload errors
-    echo "Error uploading file.";
-}
 }
 ?>
