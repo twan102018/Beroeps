@@ -1,0 +1,126 @@
+
+#log_reg{
+    padding: 5px;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+nav> ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #33333323;
+    height: 6vh;
+  }
+  
+  nav> ul>  li {
+    float: left;
+  }
+  
+  nav> ul>   li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  nav> ul>   li > img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  nav> ul>   li > img:hover {
+    box-shadow: 
+    0 0 5px #ffffffee,
+    0 0 10px #ffffffe3,
+    0 0 20px #e4e4e4ee,
+    0 0 40px #d6d6d6e5,
+    0 0 80px #fafafae5;
+  }
+  nav> ul>  li a:hover:not(.active) {
+    font-weight: bold;
+    text-shadow: 
+    0 0 5px #ffffffee,
+    0 0 10px #ffffffe3,
+    0 0 20px #e4e4e4ee,
+    0 0 40px #d6d6d6e5,
+    0 0 80px #fafafae5;
+    border-bottom: solid white 2px;
+  }
+  nav> ul>  li img:hover:not(.active) {
+    font-weight: bold;
+    text-shadow: 
+    0 0 5px #ffffffee,
+    0 0 10px #ffffffe3,
+    0 0 20px #e4e4e4ee,
+    0 0 40px #d6d6d6e5,
+    0 0 80px #fafafae5;
+    border-bottom: solid white 2px;
+  }
+  
+  .active {
+    font-weight: bold;
+    text-shadow: 
+    0 0 5px #ffffffee,
+    0 0 10px #ffffffe3,
+    0 0 20px #e4e4e4ee,
+    0 0 40px #d6d6d6e5,
+    0 0 80px #fafafae5;
+  }
+  .active:hover {
+    font-weight: bold;
+    text-shadow: 
+    0 0 5px #ffffffbe,
+    0 0 10px #ffffffb6,
+    0 0 20px #e4e4e4c0,
+    0 0 40px #d6d6d6af,
+    0 0 80px #fafafaa2;
+    border-bottom: solid white 2px;
+  }
+  /* Hide the dropdown content by default */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333; /* Change this to your desired background color */
+    z-index: 1;
+    margin-left: -10rem;
+    min-width: 200px;
+  }
+  
+  /* Show the dropdown content when the image is hovered */
+  nav > ul > li:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Add styling to your dropdown content */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Add hover effect for dropdown links if needed */
+  .dropdown-content a:hover {
+    background-color: #555; /* Change this to your desired hover background color */
+  }
+  .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 200,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.add_remove{
+  background-color: gray;
+  transition: 1s;
+}
+.add_remove:hover{
+  background-color: rgba(128, 128, 128, 0.653);
+}
+.add_shopping,
+.remove_shopping{
+  background-color: transparent;
+  border: transparent;
+}
